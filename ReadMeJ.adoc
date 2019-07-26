@@ -1,0 +1,65 @@
+= Sales Reports 
+軽減税率対応の請求書。
+ActiveReportsのデータセットデータソースとVB.netで作ったインボイスのサンプル。
+
+== 消費税10%
+
+2019/10/1から消費税が上がります。
+
+消費税は8%から10%に上がります。
+
+== 軽減税率8%
+
+日本政府は軽減税率を導入します。
+
+軽減税率は8%です。
+
+軽減税率は食料品や新聞に適用されます。
+
+== インボイス (適格請求書等保存方式)
+
+国税庁は請求書に軽減税率8%と消費税10%の両方を記載するように言ってきました。
+
+国税庁はこの請求書をインボイス、適格請求書等保存方式と呼んでいます。
+
+もし軽減税率を書かない場合、全て10%として課税されてしまいます。
+
+これらの対応は事実上義務です。
+
+== ActiveReports Designerでの作り方
+
+軽減税率に対応した請求書のサンプルを作ってみました。
+
+条件は4つ
+
+1. 軽減税率8%と消費税10%の合計をTableの中に表示
+2. ページヘッダーに軽減税率と消費税10%の合計を表示
+3. ページヘッダーに軽減税率と消費税10%に該当する税抜合計を表示
+4. 軽減税率と消費税と税抜合計を全て合計した総計を表示
+
+csvでは以前成功したがDataSetの場合でも成功するのかの実験をすることになった。
+このプログラムはGrapeCityのActiveReports DatasetDatasouceのSampleプログラムを改造して作られている。
+
+=== Enviroment
+
+- Windows10 Home/Pro
+- Visual Studio 2017 Professional
+- System Data SQLite Core (from NuGet)
+- ActiveReports Designer
+
+=== Files
+
+- データソース salesdata.sqlite
+- レポートテンプレート invoice.rdlx
+
+=== 実行方法
+
+1. Visual StudioにGit Clone。
+2. Visual Studioのデバッグの開始ボタンで実行。
+
+
+=== Link
+
+軽減税率については下記の国税庁のサイトを参照
+
+https://www.nta.go.jp/publication/pamph/koho/kurashi/html/01_5.htm[コラム≪適格請求書等保存方式の導入について≫]
