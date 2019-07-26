@@ -1,0 +1,808 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">invoice.rdlx</dd:Name>
+	<Body>
+		<Height>29.7cm</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<Table Name="Table1">
+								<DataSetName>Sales</DataSetName>
+								<Header>
+									<TableRows>
+										<TableRow>
+											<Height>1.260603cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox1">
+															<Value>Salesno</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox2">
+															<Value>detailno</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox3">
+															<Value>item</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox10">
+															<Value>price</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox13">
+															<Value>amount</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox16">
+															<Value>subtotal</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox34">
+															<Value>tax</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Header>
+								<Details>
+									<Sorting>
+										<SortBy>
+											<Direction>Ascending</Direction>
+											<SortExpression>=Fields!Salesno.Value</SortExpression>
+										</SortBy>
+										<SortBy>
+											<Direction>Ascending</Direction>
+											<SortExpression>=Fields!detailno.Value</SortExpression>
+										</SortBy>
+										<SortBy>
+											<Direction>Ascending</Direction>
+											<SortExpression>=Fields!tax.Value</SortExpression>
+										</SortBy>
+									</Sorting>
+									<TableRows>
+										<TableRow>
+											<Height>1.269767cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox4">
+															<Value>=Fields!Salesno.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox5">
+															<Value>=Fields!detailno.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox6">
+															<Value>=Fields!item.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox11">
+															<Value>=Fields!price.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox14">
+															<Value>=Fields!amount.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox17">
+															<Value>=Fields!price.Value*Fields!amount.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox39">
+															<Value>=Fields!tax.Value</Value>
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Details>
+								<Footer>
+									<TableRows>
+										<TableRow>
+											<Height>1.269767cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox7">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox8">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox9">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox12">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox15">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox18">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox41">
+															<Value />
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Footer>
+								<Height>4.55cm</Height>
+								<Left>0.2cm</Left>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">10.8cm</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">0cm</dd:FixedWidth>
+								<Style />
+								<TableColumns>
+									<TableColumn>
+										<Width>1.77669cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>1.389069cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>3.948201cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>2.17151cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>2.17151cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>2.17151cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>2.17151cm</Width>
+									</TableColumn>
+								</TableColumns>
+								<TableGroups>
+									<TableGroup>
+										<Footer>
+											<TableRows>
+												<TableRow>
+													<Height>0.749863cm</Height>
+													<TableCells>
+														<TableCell>
+															<ReportItems>
+																<Textbox Name="TextBox25">
+																	<Value />
+																	<Style>
+																		<PaddingBottom>2pt</PaddingBottom>
+																		<PaddingLeft>2pt</PaddingLeft>
+																		<PaddingRight>2pt</PaddingRight>
+																		<PaddingTop>2pt</PaddingTop>
+																	</Style>
+																</Textbox>
+															</ReportItems>
+														</TableCell>
+														<TableCell>
+															<ReportItems>
+																<Textbox Name="TextBox26">
+																	<Value />
+																	<Style>
+																		<PaddingBottom>2pt</PaddingBottom>
+																		<PaddingLeft>2pt</PaddingLeft>
+																		<PaddingRight>2pt</PaddingRight>
+																		<PaddingTop>2pt</PaddingTop>
+																	</Style>
+																</Textbox>
+															</ReportItems>
+														</TableCell>
+														<TableCell>
+															<ReportItems>
+																<Textbox Name="TextBox27">
+																	<Value>="Value Add Tax"+(Fields!tax.Value*100).toString+"%"</Value>
+																	<Style>
+																		<PaddingBottom>2pt</PaddingBottom>
+																		<PaddingLeft>2pt</PaddingLeft>
+																		<PaddingRight>2pt</PaddingRight>
+																		<PaddingTop>2pt</PaddingTop>
+																	</Style>
+																</Textbox>
+															</ReportItems>
+														</TableCell>
+														<TableCell>
+															<ReportItems>
+																<Textbox Name="TextBox28">
+																	<Value />
+																	<Style>
+																		<PaddingBottom>2pt</PaddingBottom>
+																		<PaddingLeft>2pt</PaddingLeft>
+																		<PaddingRight>2pt</PaddingRight>
+																		<PaddingTop>2pt</PaddingTop>
+																	</Style>
+																</Textbox>
+															</ReportItems>
+														</TableCell>
+														<TableCell>
+															<ReportItems>
+																<Textbox Name="TextBox29">
+																	<Value>=Sum(Fields!price.Value*Fields!amount.Value)</Value>
+																	<Style>
+																		<PaddingBottom>2pt</PaddingBottom>
+																		<PaddingLeft>2pt</PaddingLeft>
+																		<PaddingRight>2pt</PaddingRight>
+																		<PaddingTop>2pt</PaddingTop>
+																	</Style>
+																</Textbox>
+															</ReportItems>
+														</TableCell>
+														<TableCell>
+															<ReportItems>
+																<Textbox Name="TextBox30">
+																	<Value>=Sum(Fields!price.Value*Fields!amount.Value)*Fields!tax.Value</Value>
+																	<Style>
+																		<PaddingBottom>2pt</PaddingBottom>
+																		<PaddingLeft>2pt</PaddingLeft>
+																		<PaddingRight>2pt</PaddingRight>
+																		<PaddingTop>2pt</PaddingTop>
+																		<TextAlign>Right</TextAlign>
+																	</Style>
+																</Textbox>
+															</ReportItems>
+														</TableCell>
+														<TableCell>
+															<ReportItems>
+																<Textbox Name="TextBox40">
+																	<Value />
+																	<Style>
+																		<PaddingBottom>2pt</PaddingBottom>
+																		<PaddingLeft>2pt</PaddingLeft>
+																		<PaddingRight>2pt</PaddingRight>
+																		<PaddingTop>2pt</PaddingTop>
+																	</Style>
+																</Textbox>
+															</ReportItems>
+														</TableCell>
+													</TableCells>
+												</TableRow>
+											</TableRows>
+										</Footer>
+										<Grouping Name="Table1_Group1">
+											<GroupExpressions>
+												<GroupExpression>=Fields!tax.Value</GroupExpression>
+											</GroupExpressions>
+											<Label>=Fields!tax.Value</Label>
+										</Grouping>
+									</TableGroup>
+								</TableGroups>
+								<Top>3.2cm</Top>
+								<Width>15.8cm</Width>
+								<ZIndex>1</ZIndex>
+							</Table>
+							<Textbox Name="TextBox19">
+								<Height>0.75cm</Height>
+								<Left>4.404399cm</Left>
+								<Value>=Sum(Fields!price.Value*Fields!amount.Value,Sales3)*First(Fields!tax.Value, "Sales3")</Value>
+								<Style>
+									<Format>=""</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+								</Style>
+								<Top>17.4cm</Top>
+								<Width>5.2cm</Width>
+								<ZIndex>2</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox32">
+								<DataElementName>TextBox19</DataElementName>
+								<Height>0.75cm</Height>
+								<Left>9.600016cm</Left>
+								<Value>=Sum(Fields!price.Value*Fields!amount.Value,Sales2)*First(Fields!tax.Value, "Sales2")</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>17.4cm</Top>
+								<Width>5.2cm</Width>
+								<ZIndex>2</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox33">
+								<Height>0.75cm</Height>
+								<Left>0.8cm</Left>
+								<Value>Value Add Tax</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>17.4cm</Top>
+								<Width>3.5cm</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox20">
+								<DataElementName>TextBox33</DataElementName>
+								<Height>0.75cm</Height>
+								<Left>9.592084cm</Left>
+								<Value>Target 8%</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+								</Style>
+								<Top>15.61042cm</Top>
+								<Width>5.2079cm</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox21">
+								<DataElementName>TextBox33</DataElementName>
+								<Height>0.75cm</Height>
+								<Left>4.4cm</Left>
+								<Value>Target 10%</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+								</Style>
+								<Top>15.6cm</Top>
+								<Width>5.2044cm</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox22">
+								<DataElementName>TextBox19</DataElementName>
+								<Height>0.75cm</Height>
+								<Left>9.6cm</Left>
+								<Value>=Sum(Fields!price.Value*Fields!amount.Value,Sales2)</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>16.53646cm</Top>
+								<Width>5.2cm</Width>
+								<ZIndex>2</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox23">
+								<DataElementName>TextBox19</DataElementName>
+								<Height>0.75cm</Height>
+								<Left>4.392083cm</Left>
+								<Value>=Sum(Fields!price.Value*Fields!amount.Value,Sales3)</Value>
+								<Style>
+									<Format>=""</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+								</Style>
+								<Top>16.53646cm</Top>
+								<Width>5.2cm</Width>
+								<ZIndex>2</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox24">
+								<DataElementName>TextBox33</DataElementName>
+								<Height>0.75cm</Height>
+								<Left>0.8cm</Left>
+								<Value>total</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>18.4cm</Top>
+								<Width>3.5cm</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox35">
+								<DataElementName>TextBox33</DataElementName>
+								<Height>0.75cm</Height>
+								<Left>7.2cm</Left>
+								<Value>Grand Total</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>19.65854cm</Top>
+								<Width>2.3cm</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox36">
+								<DataElementName>TextBox19</DataElementName>
+								<Height>0.75cm</Height>
+								<Left>9.6cm</Left>
+								<Value>=Sum(Fields!price.Value*Fields!amount.Value,Sales2)+Sum(Fields!price.Value*Fields!amount.Value*Fields!tax.Value,Sales2)</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>18.4cm</Top>
+								<Width>5.2cm</Width>
+								<ZIndex>2</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox37">
+								<DataElementName>TextBox19</DataElementName>
+								<Height>0.75cm</Height>
+								<Left>4.392083cm</Left>
+								<Value>=Sum(Fields!price.Value*Fields!amount.Value,Sales3)+Sum(Fields!price.Value*Fields!amount.Value*Fields!tax.Value,Sales3)</Value>
+								<Style>
+									<Format>=""</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<dd:ShrinkToFit xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">False</dd:ShrinkToFit>
+								</Style>
+								<Top>18.4cm</Top>
+								<Width>5.2cm</Width>
+								<ZIndex>2</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox38">
+								<DataElementName>TextBox33</DataElementName>
+								<Height>0.75cm</Height>
+								<Left>0.8cm</Left>
+								<Value>Subtotal</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>16.53646cm</Top>
+								<Width>3.5cm</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+							<Textbox Name="TextBox31">
+								<DataElementName>TextBox33</DataElementName>
+								<Height>0.75cm</Height>
+								<Left>9.577916cm</Left>
+								<Value>=Sum(Fields!price.Value*Fields!amount.Value)+Sum(Fields!price.Value*Fields!amount.Value,Sales3)*First(Fields!tax.Value, "Sales3")+Sum(Fields!price.Value*Fields!amount.Value,Sales2)*First(Fields!tax.Value, "Sales2")</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>19.65854cm</Top>
+								<Width>5.2221cm</Width>
+								<ZIndex>3</ZIndex>
+							</Textbox>
+						</ReportItems>
+						<Style />
+					</Page>
+				</Pages>
+				<DataSetName>Sales</DataSetName>
+			</FixedPage>
+		</ReportItems>
+		<Style />
+	</Body>
+	<BottomMargin>2.5cm</BottomMargin>
+	<LeftMargin>2.5cm</LeftMargin>
+	<PageHeight>29.7cm</PageHeight>
+	<PageWidth>21cm</PageWidth>
+	<RightMargin>2.5cm</RightMargin>
+	<TopMargin>2.5cm</TopMargin>
+	<Width>21cm</Width>
+	<DataSources>
+		<DataSource Name="DataSource1">
+			<ConnectionProperties>
+				<DataProvider>DATASET</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+		<DataSource Name="percent8">
+			<ConnectionProperties>
+				<DataProvider>DATASET</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+		<DataSource Name="percent10">
+			<ConnectionProperties>
+				<DataProvider>DATASET</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="Sales">
+			<Fields>
+				<Field Name="Salesno">
+					<DataField>Salesno</DataField>
+				</Field>
+				<Field Name="detailno">
+					<DataField>detailno</DataField>
+				</Field>
+				<Field Name="item">
+					<DataField>item</DataField>
+				</Field>
+				<Field Name="price">
+					<DataField>price</DataField>
+				</Field>
+				<Field Name="amount">
+					<DataField>amount</DataField>
+				</Field>
+				<Field Name="tax">
+					<DataField>tax</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>select * from sales</CommandText>
+				<DataSourceName>DataSource1</DataSourceName>
+			</Query>
+		</DataSet>
+		<DataSet Name="Sales2">
+			<Fields>
+				<Field Name="Salesno">
+					<DataField>Salesno</DataField>
+				</Field>
+				<Field Name="detailno">
+					<DataField>detailno</DataField>
+				</Field>
+				<Field Name="item">
+					<DataField>item</DataField>
+				</Field>
+				<Field Name="price">
+					<DataField>price</DataField>
+				</Field>
+				<Field Name="amount">
+					<DataField>amount</DataField>
+				</Field>
+				<Field Name="tax">
+					<DataField>tax</DataField>
+				</Field>
+			</Fields>
+			<Filters>
+				<Filter>
+					<FilterExpression>=Fields!tax.Value</FilterExpression>
+					<FilterValues>
+						<FilterValue>0.08</FilterValue>
+					</FilterValues>
+					<Operator>Equal</Operator>
+				</Filter>
+			</Filters>
+			<Query>
+				<CommandText>select * from sales</CommandText>
+				<DataSourceName>percent8</DataSourceName>
+			</Query>
+		</DataSet>
+		<DataSet Name="Sales3">
+			<Fields>
+				<Field Name="Salesno">
+					<DataField>Salesno</DataField>
+				</Field>
+				<Field Name="detailno">
+					<DataField>detailno</DataField>
+				</Field>
+				<Field Name="item">
+					<DataField>item</DataField>
+				</Field>
+				<Field Name="price">
+					<DataField>price</DataField>
+				</Field>
+				<Field Name="amount">
+					<DataField>amount</DataField>
+				</Field>
+				<Field Name="tax">
+					<DataField>tax</DataField>
+				</Field>
+			</Fields>
+			<Filters>
+				<Filter>
+					<FilterExpression>=Fields!tax.Value</FilterExpression>
+					<FilterValues>
+						<FilterValue>0.1</FilterValue>
+					</FilterValues>
+					<Operator>Equal</Operator>
+				</Filter>
+			</Filters>
+			<Query>
+				<CommandText>select * from sales</CommandText>
+				<DataSourceName>percent10</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>
